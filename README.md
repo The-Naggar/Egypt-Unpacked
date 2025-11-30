@@ -31,7 +31,7 @@ Designed with simplicity and visual impact in mind, the application delivers an 
 ## 🚀 Quick Start
 
 ```bash
-git clone [your repository URL]
+git clone https://github.com/The-Naggar/Egypt-Unpacked.git
 cd egypt-unpacked
 npm install
 npm start
