@@ -1,8 +1,3 @@
-# ![Egypt Unpacked Banner](banner.png)
-
-<p align="center">
-  <img src="logo.png" alt="Egypt Unpacked Logo" width="120" />
-</p>
 
 # 🌍 Egypt Unpacked  
 ### *A Clean, Minimal & Immersive Tourism Experience*
