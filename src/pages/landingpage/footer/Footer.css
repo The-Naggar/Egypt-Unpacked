@@ -1,0 +1,25 @@
+.site-footer {
+  background: rgba(14, 15, 16, 0.98);
+  border-top: 1px solid rgba(188, 145, 76, 0.15);
+  color: #f2f2f2;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.footer-meta {
+  font-family: 'Inter', sans-serif;
+  color: #d4d4d4;
+}

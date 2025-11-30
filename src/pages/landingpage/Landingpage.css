@@ -1,0 +1,44 @@
+/* Landingpage.css – FINAL & PERFECT */
+html {
+  scroll-behavior: smooth;        /* ← This is the magic for smooth scrolling */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* This wrapper makes everything sit on top of the 3D hero */
+.page-content {
+  position: relative;
+  z-index: 2000;                   /* Way above Canvas (z=2) */
+  pointer-events: none;           /* Let mouse go through to the 3D model */
+  min-height: 100vh;
+}
+
+.page-content > * {
+  pointer-events: auto;           /* Re-enable interaction on real content */
+}
+
+/* Give space for the fixed navbar so sections don't hide under it */
+.page-content > :not(:first-child):not(:nth-child(2)) {
+  scroll-margin-top: 80px;        /* Adjust if your navbar is taller/shorter */
+}
+
+/* Optional: extra smooth feel (especially nice with the hero) */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* If you ever want to disable smooth scroll for some users */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

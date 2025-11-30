@@ -1,0 +1,623 @@
+.new-egyptian-museum-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #434445 100%);
+  color: white;
+  
+}
+
+.museum-carousel {
+  position: relative;
+  height: 70vh;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto 60px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.museum-carousel .carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.museum-carousel .carousel-slide.active {
+  opacity: 1;
+}
+
+.museum-carousel .slide-content {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  right: 60px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.museum-carousel .slide-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  font-family: 'Playfair Display', serif;
+}
+
+.museum-carousel .slide-content h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  font-family: 'Playfair Display', serif;
+}
+
+.museum-carousel .slide-content p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  line-height: 1.6;
+}
+
+/* أزرار الكاروسيل - محسنة للجوال */
+.museum-carousel .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(212, 175, 55, 0.8);
+  border: none;
+  border-radius: 50%;
+  color: #000;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.museum-carousel .carousel-btn:hover {
+  background: rgba(212, 175, 55, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.museum-carousel .prev-btn {
+  left: 20px;
+}
+
+.museum-carousel .next-btn {
+  right: 20px;
+}
+
+/* نقاط التنقل */
+.museum-carousel .carousel-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.museum-carousel .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.museum-carousel .dot.active {
+  background: #d4af37;
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+.museum-carousel .dot:hover {
+  background: rgba(212, 175, 55, 0.7);
+}
+
+/* المحتوى الرئيسي */
+.new-egyptian-museum-page .main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* قسم التذاكر */
+.new-egyptian-museum-page .tickets-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.new-egyptian-museum-page .tickets-section h2 {
+  font-size: 2.2rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .tickets-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #d4af37;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.new-egyptian-museum-page .ticket-types {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.new-egyptian-museum-page .ticket-type {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 177, 66, 0.3);
+  transition: all 0.3s ease;
+}
+
+.new-egyptian-museum-page .ticket-type:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.new-egyptian-museum-page .ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.new-egyptian-museum-page .ticket-header h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+}
+
+.new-egyptian-museum-page .ticket-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.new-egyptian-museum-page .ticket-features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.new-egyptian-museum-page .ticket-features li {
+  padding: 6px 0;
+  color: #e0e0e0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.new-egyptian-museum-page .ticket-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.new-egyptian-museum-page .book-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #d4af37 0%, #b89435 100%);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.new-egyptian-museum-page .book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 177, 66, 0.4);
+}
+
+/* قسم معلومات المتحف */
+.new-egyptian-museum-page .museum-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.new-egyptian-museum-page .museum-info h2 {
+  font-size: 2.2rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .museum-info h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #d4af37;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.new-egyptian-museum-page .info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.new-egyptian-museum-page .info-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 4px solid #d4af37;
+}
+
+.new-egyptian-museum-page .info-card h3 {
+  font-size: 1.3rem;
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .info-card p {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.new-egyptian-museum-page .highlights-section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 177, 66, 0.3);
+}
+
+.new-egyptian-museum-page .highlights-section h3 {
+  font-size: 1.6rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.new-egyptian-museum-page .highlight-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 3px solid #d4af37;
+}
+
+.new-egyptian-museum-page .highlight-card h4 {
+  font-size: 1.2rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .highlight-card p {
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.new-egyptian-museum-page .visitor-info {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 177, 66, 0.3);
+}
+
+.new-egyptian-museum-page .visitor-info h3 {
+  font-size: 1.6rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.new-egyptian-museum-page .info-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.new-egyptian-museum-page .info-item h4 {
+  font-size: 1.1rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .info-item p {
+  color: #e0e0e0;
+  line-height: 1.5;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.new-egyptian-museum-page .conservation-message {
+  background: linear-gradient(135deg, rgba(255, 177, 66, 0.1) 0%, rgba(255, 159, 26, 0.05) 100%);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(51, 46, 29, 0.3);
+  text-align: center;
+}
+
+.new-egyptian-museum-page .conservation-message h4 {
+  font-size: 1.4rem;
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.new-egyptian-museum-page .conservation-message p {
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* تأثيرات إضافية */
+.museum-carousel .carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.new-egyptian-museum-page .ticket-type:nth-child(2) {
+  border-color: rgba(255, 177, 66, 0.5);
+  transform: scale(1.02);
+}
+
+.new-egyptian-museum-page .ticket-type:nth-child(2):hover {
+  transform: scale(1.02) translateY(-5px);
+}
+
+/* تحسينات للاستجابة */
+@media (max-width: 1200px) {
+  .museum-carousel {
+    height: 60vh;
+  }
+  
+  .museum-carousel .slide-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .museum-carousel .slide-content h3 {
+    font-size: 2.2rem;
+  }
+  
+  .museum-carousel .slide-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .new-egyptian-museum-page .main-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .museum-carousel .slide-content {
+    left: 40px;
+    bottom: 70px;
+  }
+  
+  .museum-carousel .slide-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .museum-carousel .slide-content h3 {
+    font-size: 2rem;
+  }
+  
+  .new-egyptian-museum-page .highlights-grid,
+  .new-egyptian-museum-page .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .museum-carousel {
+    height: 50vh;
+    width: 95%;
+  }
+  
+  .museum-carousel .slide-content {
+    left: 25px;
+    bottom: 60px;
+    right: 25px;
+  }
+  
+  .museum-carousel .slide-content h1 {
+    font-size: 2rem;
+  }
+  
+  .museum-carousel .slide-content h3 {
+    font-size: 1.8rem;
+  }
+  
+  .museum-carousel .slide-content p {
+    font-size: 1rem;
+  }
+  
+  .museum-carousel .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  
+  .museum-carousel .prev-btn {
+    left: 15px;
+  }
+  
+  .museum-carousel .next-btn {
+    right: 15px;
+  }
+  
+  .new-egyptian-museum-page .tickets-section,
+  .new-egyptian-museum-page .museum-info {
+    padding: 25px 20px;
+  }
+  
+  .new-egyptian-museum-page .tickets-section h2,
+  .new-egyptian-museum-page .museum-info h2 {
+    font-size: 1.9rem;
+  }
+  
+  .new-egyptian-museum-page .ticket-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .new-egyptian-museum-page .ticket-price {
+    font-size: 1.6rem;
+  }
+  
+  .new-egyptian-museum-page .highlights-section h3,
+  .new-egyptian-museum-page .visitor-info h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .museum-carousel {
+    height: 40vh;
+    border-radius: 10px;
+  }
+  
+  .museum-carousel .slide-content {
+    left: 15px;
+    bottom: 50px;
+    right: 15px;
+  }
+  
+  .museum-carousel .slide-content h1 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  
+  .museum-carousel .slide-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  
+  .museum-carousel .slide-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .museum-carousel .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .museum-carousel .prev-btn {
+    left: 10px;
+  }
+  
+  .museum-carousel .next-btn {
+    right: 10px;
+  }
+  
+  .museum-carousel .carousel-dots {
+    bottom: 15px;
+  }
+  
+  .new-egyptian-museum-page .main-content {
+    padding: 0 15px 40px;
+  }
+  
+  .new-egyptian-museum-page .tickets-section,
+  .new-egyptian-museum-page .museum-info {
+    padding: 20px 15px;
+  }
+  
+  .new-egyptian-museum-page .tickets-section h2,
+  .new-egyptian-museum-page .museum-info h2 {
+    font-size: 1.7rem;
+  }
+  
+  .new-egyptian-museum-page .ticket-type {
+    padding: 15px;
+  }
+  
+  .new-egyptian-museum-page .info-card,
+  .new-egyptian-museum-page .highlights-section,
+  .new-egyptian-museum-page .visitor-info,
+  .new-egyptian-museum-page .conservation-message {
+    padding: 20px;
+  }
+  
+  .new-egyptian-museum-page .book-btn {
+    width: 100%;
+    padding: 12px;
+  }
+  
+  .new-egyptian-museum-page .highlight-card,
+  .new-egyptian-museum-page .info-item {
+    padding: 15px;
+  }
+}

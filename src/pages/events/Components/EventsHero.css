@@ -1,0 +1,95 @@
+.events-hero {
+  background: linear-gradient(135deg, #045c5a 0%, #023a3a 100%);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.events-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  opacity: 0.5;
+}
+
+.events-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.events-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #f2f2f2;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.events-subtitle {
+  font-family: 'Inter', sans-serif;
+  color: rgba(242, 242, 242, 0.9);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.events-divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(135deg, #BC914C 0%, #d4b87c 100%);
+  margin: 2rem auto 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(188, 145, 76, 0.5);
+}
+
+.events-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.event-stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d4b87c;
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: rgba(242, 242, 242, 0.8);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .events-hero {
+    padding: 80px 20px;
+  }
+  
+  .events-stats {
+    gap: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}

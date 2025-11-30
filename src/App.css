@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Force sections to stack vertically */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section base styles */
+section {
+  display: block;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #045c5a 0%, #023a3a 100%);
+  color: #f2f2f2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: calc(70px + 30px) 2rem 2rem;
+}
+
+/* Attractions Section */
+.attractions-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #000000 0%, #57585a 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}

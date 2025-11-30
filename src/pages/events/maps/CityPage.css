@@ -1,0 +1,226 @@
+.city-container {
+  padding: 40px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom right, #0a4c4a, #023535);
+  min-height: 100vh;
+}
+
+.city-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.city-desc {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.visitors {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #ffd27f;
+}
+
+.not-found {
+  color: red;
+  text-align: center;
+  padding: 40px;
+}
+
+/* SLIDER */
+.slider {
+  width: 80%;        /* مصغرة */
+  margin: 35px auto;
+  height: 450px;     /* مصغرة */
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide img {
+  width: 100%;          /* تغيير من auto إلى 100% */
+  height: 100%;
+  object-fit: cover;    /* تغيير من contain إلى cover لملء المساحة */
+}
+
+.slide.active {
+  display: block;
+  animation: fade 0.6s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* 3D CARD */
+.city-card {
+  width: 70%;
+  margin: 35px auto;
+  background: #0e5a58;
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+  
+  transition: 0.3s;
+}
+
+
+
+/* ACTIONS */
+.actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-btn {
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  background: #ffd27f;
+  cursor: pointer;
+  font-weight: bold;
+  color: #023535;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #ffcc66;
+  transform: translateY(-2px);
+}
+
+/* ICONS */
+.action-icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* LIKE */
+.like-wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.like-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.like-btn {
+  font-size: 26px;
+  transition: 0.2s;
+}
+
+.like-btn.active {
+  color: #ff4d4d;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.likes-count {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* SHARE */
+.share-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.share-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.share-btn {
+  font-size: 26px;
+  transition: 0.2s;
+}
+
+.share-wrapper:hover .share-btn {
+  color: #00d4ff;
+  transform: scale(1.15);
+}
+
+/* SHARE POPUP */
+.share-popup {
+  margin-top: 18px;
+  background: #00d4ff;
+  color: black;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  animation: fadeInOut 1.5s ease;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -5px); }
+  30% { opacity: 1; transform: translate(-50%, 0); }
+  70% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -5px); }
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .city-container {
+    padding: 20px;
+  }
+  
+  .city-title {
+    font-size: 36px;
+  }
+  
+  .slider {
+    width: 90%;
+    height: 200px;
+  }
+  
+  .city-card {
+    width: 90%;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .action-icons {
+    gap: 25px;
+  }
+}

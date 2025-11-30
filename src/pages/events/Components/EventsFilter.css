@@ -1,0 +1,132 @@
+.events-filter {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(188, 145, 76, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #a0a0a0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #BC914C 0%, #d4b87c 100%);
+  color: #0e0f10;
+  font-weight: 600;
+}
+
+.tab-btn:hover:not(.active) {
+  background: rgba(188, 145, 76, 0.1);
+  color: #d4b87c;
+}
+
+.filter-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(188, 145, 76, 0.3);
+  border-radius: 10px;
+  padding: 12px 45px 12px 20px;
+  color: #f2f2f2;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(242, 242, 242, 0.4);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #BC914C;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(188, 145, 76, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d4b87c;
+}
+
+.filter-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(188, 145, 76, 0.3);
+  border-radius: 10px;
+  padding: 12px 20px;
+  color: #f2f2f2;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #BC914C;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.filter-select option {
+  background: #1a1a1a;
+  color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .filter-controls {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-filter {
+    padding: 20px;
+  }
+  
+  .filter-tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .filter-controls {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,534 @@
+/* === Hero Section Base === */
+:root {
+  --navbar-height: 70px;
+  --navbar-height-scrolled: 60px;
+  --navbar-height-mobile: 60px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #045c5a 0%, #023a3a 100%);
+  color: #f2f2f2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: calc(var(--navbar-height) + 30px) 2rem 2rem;
+  min-height: 600px;
+  width: 100%;
+  
+}
+
+/* Ancient Egyptian Pattern Overlay */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4b87c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Container Layout */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+/* === Left Text Side === */
+.hero-text {
+  flex: 1;
+  animation: fadeInLeft 1.2s ease forwards;
+  padding-bottom: 0;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: 'Playfair Display', serif;
+  color: #f2f2f2;
+  margin-bottom: 1.2rem;
+}
+
+.hero-title span {
+  color: #d4b87c;
+  background: linear-gradient(135deg, #d4b87c 0%, #b8904c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  max-width: 90%;
+}
+
+/* Statistics */
+.hero-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d4b87c;
+  font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  margin-top: 0.25rem;
+}
+
+/* === Buttons === */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-btn {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.hero-btn.primary {
+  background: linear-gradient(135deg, #d4b87c 0%, #b8904c 100%);
+  color: #0e0f10;
+  box-shadow: 0 4px 15px rgba(188, 145, 76, 0.3);
+}
+
+.hero-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(188, 145, 76, 0.5);
+}
+
+.hero-btn.secondary {
+  background: transparent;
+  border: 2px solid #d4b87c;
+  color: #d4b87c;
+  backdrop-filter: blur(10px);
+}
+
+.hero-btn.secondary:hover {
+  background: rgba(212, 184, 124, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 184, 124, 0.2);
+}
+
+/* === Right Image Side === */
+.hero-image-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  animation: fadeInRight 1.2s ease forwards;
+  height: 100%;
+  min-height: 500px;
+}
+
+.hero-image {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 0 30px rgba(212, 184, 124, 0.3));
+  z-index: 2;
+  left: 120px;
+  position: relative;
+}
+
+.gold-glow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(212, 184, 124, 0.25) 0%, rgba(4, 92, 90, 0) 70%);
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Floating Elements */
+.floating-element {
+  position: absolute;
+  background: rgba(212, 184, 124, 0.1);
+  border: 1px solid rgba(212, 184, 124, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.element-1 {
+  width: 80px;
+  height: 80px;
+  top: 10%;
+  right: 30%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.element-2 {
+  width: 60px;
+  height: 60px;
+  bottom: 20%;
+  right: 55%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+/* === Animations === */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .hero-container {
+    gap: 2rem;
+    max-width: 1000px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-image {
+    max-width: 380px;
+    left: 80px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 968px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .hero-text {
+    flex: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-image-wrapper {
+    flex: none;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-image {
+    max-width: 320px;
+    max-height: 50vh;
+    left: 0;
+    position: relative;
+  }
+
+  .gold-glow {
+    width: 80%;
+    height: 80%;
+    right: 10%;
+    bottom: 10%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: calc(var(--navbar-height-mobile) + 20px) 1.5rem 1.5rem;
+    height: auto;
+    min-height: calc(100vh - var(--navbar-height-mobile));
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .hero-image-wrapper {
+    min-height: 350px;
+  }
+
+  .hero-image {
+    max-width: 280px;
+    max-height: 45vh;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: calc(var(--navbar-height-mobile) + 15px) 1rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image-wrapper {
+    min-height: 300px;
+  }
+
+  .hero-image {
+    max-width: 240px;
+    max-height: 40vh;
+  }
+
+  .gold-glow {
+    width: 70%;
+    height: 70%;
+  }
+
+  .floating-element {
+    display: none;
+  }
+}
+
+/* Very Small Mobile Devices */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .hero-image {
+    max-width: 200px;
+  }
+
+  .hero-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Height-based adjustments for landscape and short screens */
+@media (max-height: 700px) and (min-width: 769px) {
+  .hero-section {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    
+  }
+
+  .hero-stats {
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-image-wrapper {
+    min-height: 400px;
+  }
+
+  .hero-image {
+    max-width: 320px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (max-width: 968px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: calc(var(--navbar-height-mobile) + 15px) 1.5rem 1.5rem;
+  }
+
+  .hero-container {
+    gap: 1.5rem;
+  }
+
+  .hero-image-wrapper {
+    min-height: 250px;
+  }
+
+  .hero-image {
+    max-height: 35vh;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-text,
+  .hero-image-wrapper,
+  .gold-glow,
+  .floating-element {
+    animation: none;
+  }
+
+  .hero-btn {
+    transition: none;
+  }
+}
