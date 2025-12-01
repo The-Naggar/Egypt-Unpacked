@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useCart } from '../../../hooks/useCart';
-import "./EventCard.css";
+import "./Eventcard.css";
 
 export default function EventCard({ event }) {
   const [isHovered, setIsHovered] = useState(false);
